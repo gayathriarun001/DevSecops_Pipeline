@@ -46,4 +46,4 @@ jobs:
           JF_ACCESS_TOKEN: ${{ secrets.JFROG_TOKEN }}
       - name: Upload JAR to JFrog
         run: |
-           jf rt u "target/*.jar" "my_ci_artifact/"     
+           jf rt u "target/*.jar" "petjfrog-repo/"     
