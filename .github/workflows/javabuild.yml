@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: java_build
+    runs-on: ip-172-31-3-145
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -42,8 +42,8 @@ jobs:
         with:
           version: latest
         env:
-          JF_URL: https://trialed2lwf.jfrog.io
+          JF_URL: https://trialtiy0ik.jfrog.io/ui/login
           JF_ACCESS_TOKEN: ${{ secrets.JFROG_TOKEN }}
       - name: Upload JAR to JFrog
         run: |
-           jf rt u "target/*.jar" "petjfrog-repo/"     
+           jf rt u "target/*.jar" "my_ci_artifact/"     

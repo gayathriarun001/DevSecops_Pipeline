@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    runs-on: java_build
+    runs-on: ip-172-31-3-145
     #needs: build  # Ensures test only runs after build succeeds
     steps:
       - name: Run Unit Tests
