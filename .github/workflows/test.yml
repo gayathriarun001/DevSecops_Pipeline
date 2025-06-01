@@ -7,7 +7,7 @@ on:
 jobs:
   test:
     runs-on: ip-172-31-3-145
-    #needs: build  # Ensures test only runs after build succeeds
+    #needs: build  # Ensures test only  after build succeeds
     steps:
       - name: Run Unit Tests
         run: mvn test
