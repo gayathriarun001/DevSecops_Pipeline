@@ -6,7 +6,7 @@ on:
 
 jobs:
   sonar:
-    runs-on: ip-172-31-3-145
+    runs-on: self-hosted
     #needs: build  # Ensures Sonar runs after build succeeds
     steps:
       - name: SonarCloud Scan

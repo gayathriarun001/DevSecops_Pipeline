@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    runs-on: ip-172-31-3-145
+    runs-on: self-hosted
     #needs: build  # Ensures test only  after build succeeds
     steps:
       - name: Run Unit Tests
