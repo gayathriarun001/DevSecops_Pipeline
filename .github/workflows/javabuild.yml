@@ -60,4 +60,4 @@ jobs:
             --interactive=false
 
       - name: Upload artifacts to Artifactory
-        run: jfrog rt upload "target/*.jar" petfrog-repo/
+        run: jfrog rt upload "target/*.jar" petfrog-repo/  --build-name=CI-Pipeline --build-number=8
