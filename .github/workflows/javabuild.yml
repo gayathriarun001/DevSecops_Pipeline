@@ -42,7 +42,7 @@ jobs:
         with:
           version: latest
         env:
-          JF_URL: https://trialtiy0ik.jfrog.io/ui/login
+          JF_URL: https://trialtiy0ik.jfrog.io/ui
           JF_ACCESS_TOKEN: ${{ secrets.JFROG_TOKEN }}
       - name: Upload JAR to JFrog
         run: |
