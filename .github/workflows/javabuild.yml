@@ -27,37 +27,24 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      # - name: Upload Build Artifact
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: jar
-      #     path: target/*.jar
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: jar
+          path: target/*.jar
         
-    #   - name: Configure JFrog CLI
-    # token
-    #     run: |
-    #         jfrog config add my-artifactory --url=https://trial42aeja.jfrog.io --apikey=${{ secrets.JFROG_TOKEN }}
      # - name: Configure JFrog CLI
-      #  uses: jfrog/setup-jfrog-cli@v3
-      #  with:
-      #    version: 2.56.0
-      #  env:
-      #    JF_URL: https://trialtiy0ik.jfrog.io
-      #    JF_ACCESS_TOKEN: ${{ secrets.JFROG_TOKEN }}
-      #- name: Upload JAR to JFrog
-       # run: |
-      #     jf rt u "target/*.jar" "petjfrog-repo/"
-      - name: Setup JFrog CLI
+     
+       #  run: |
+        #    jfrog config add my-artifactory --url=https://trial42aeja.jfrog.io --apikey=${{ secrets.JFROG_TOKEN }}
+      - name: Configure JFrog CLI
         uses: jfrog/setup-jfrog-cli@v3
         with:
-          version: '2.56.0'  # o 
-           
-      - name: Configure JFrog CLI
+         version: 2.56.0
+        env:
+          JF_URL: https://trialtiy0ik.jfrog.io
+          JF_ACCESS_TOKEN: ${{ secrets.JFROG_TOKEN }}
+      - name: Upload JAR to JFrog
         run: |
-          jfrog config add my-server \
-            --url="${{ secrets.JFROG_URL }}" \
-            --access-token="${{ secrets.JFROG_TOKEN }}" \
-            --interactive=false
-
-      - name: Upload artifacts to Artifactory
-        run: jfrog rt upload "target/*.jar" petfrog-repo/  --build-name=CI-Pipeline --build-number=8
+          jf rt u "target/*.jar" "petjfrog-repo/"
+     
