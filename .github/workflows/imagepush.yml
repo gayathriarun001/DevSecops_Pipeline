@@ -9,8 +9,15 @@ jobs:
     runs-on: self-hosted
     env:
       DOCKER_IMAGE: gayathrirudra/petapp:${{ github.sha }}
-
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc
+          docker system prune -af
+          df -h
       - name: Build Docker Image
         run: |
           sudo docker build -t ${{ env.DOCKER_IMAGE }} .
