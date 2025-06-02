@@ -27,11 +27,11 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: jar
-          path: target/*.jar
+      #- name: Upload Build Artifact
+      #  uses: actions/upload-artifact@v3
+      #  with:
+      #    name: jar
+       #   path: target/*.jar
         
      # - name: Configure JFrog CLI
      
