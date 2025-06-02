@@ -10,5 +10,5 @@ jobs:
     #needs: build  # Ensures Sonar runs after build succeeds
     steps:
       - name: SonarCloud Scan
-        run: mvn sonar:sonar -Dsonar.projectKey=gayathri01-key_devsecops -Dsonar.organization=gayathri01 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=7183b42171b91717c76365631c8e89d1124af77d
+        run: mvn sonar:sonar -Dsonar.projectKey=gayathri01-key -Dsonar.organization=devsecops -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=7183b42171b91717c76365631c8e89d1124af77d
         
