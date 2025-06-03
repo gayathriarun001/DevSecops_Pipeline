@@ -2,7 +2,7 @@ FROM openjdk:17-slim
 
 WORKDIR /home/petclinic/
 
-COPY ./DevSecops_Pipeline/target/*.jar .
+COPY ./target/*.jar .
 
 EXPOSE 8080
 
