@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: jar
-          path: target/*.jar
+          path: ./_work/DevSecops_Pipeline/DevSecops_Pipeline/target/
         
      # - name: Configure JFrog CLI
      
