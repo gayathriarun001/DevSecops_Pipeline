@@ -12,6 +12,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: download Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: jar
+          path: target/*.jar
 
       - name: Free disk space
         run: |
