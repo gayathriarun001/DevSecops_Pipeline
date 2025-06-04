@@ -30,11 +30,12 @@ jobs:
         run: ls -l target
 
 
-      #- name: Upload Build Artifact
-      #  uses: actions/upload-artifact@v3
-      #  with:
-       #   name: jar
-        #  path: target/*.jar
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jar
+          path: target/*.jar
+          retention-days: 14 days
         
      # - name: Configure JFrog CLI
      
